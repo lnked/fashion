@@ -67,7 +67,44 @@
 
 		initFancyBox: function()
 		{
-			alert('FancyBox');
+			if (!is_undefined($.fn.fancybox))
+			{
+				$('.fancybox').fancybox({
+					helpers: {
+						overlay: {
+						  locked: false
+						}
+					}
+				});
+
+				$('.fancybox-media').fancybox({
+					openEffect  : 'none',
+					closeEffect : 'none',
+					helpers : {
+						media : {},
+						overlay: {
+						  locked: false
+						}
+					}
+				});
+
+				$(".various").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '70%',
+					height		: '70%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none',
+					helpers: {
+						overlay: {
+						  locked: false
+						}
+					}
+				});
+			}
 		},
 
 		initAjaxForm: function()
@@ -91,6 +128,7 @@
 			this.initPopup();
 			this.initMask();
 			this.initSelect();
+			this.initFancyBox();
 		}
 
 	};
