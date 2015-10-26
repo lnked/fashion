@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- (c) lnk. celebro | http://www.celebro.ru/ -->
+
+<!--[if lt IE 7 ]> <html class="ie6" lang="ru"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie7" lang="ru"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8" lang="ru"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru" class="no-js" itemscope="itemscope" xmlns="http://www.w3.org/1999/xhtml" itemtype="http://schema.org/WebPage">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="on" http-equiv="cleartype">
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="ru" itemprop="inLanguage">
+    <meta content="index, follow" name="robots">
+    
+    <meta content="telephone=no" name="format-detection">
+    <meta content="address=no" name="format-detection">
+    <meta content="True" name="HandheldFriendly">
+    <meta content="320" name="MobileOptimized">
+
+    <meta content="" name="author">
+    <meta content="" name="copyright">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+    
+    <script>
+        window.load_product_url = '../json/product.json';
+    </script>
+    
+    <!--[if IE 9]>
+    <script type="text/javascript" src="/js/vendor/polyfill.typedarray.js"></script>
+    <script type="text/javascript" src="/js/vendor/pollyfill.request.animation.frame.js"></script>
+    <![endif]-->
+
+    <title itemprop="name">Main</title>
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<script type="text/html" id="tmpl-popup-message">
+	<div class="popup" id="popup_message">
+	    <b class="popup__close js-popup-close"></b>
+	    {{#title}}
+	    <div class="popup__header">{{title}}</div>
+	    {{/title}}
+		<div class="popup__content clearfix">
+			{{text}}
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="tmpl-popup-product">
+	<div class="popup" id="tmpl_product_item">
+	    <b class="popup__close js-popup-close"></b>
+
+	    {{#title}}
+	    <div class="popup__header">{{title}}</div>
+	    {{/title}}
+	    
+		<div class="popup__content clearfix">
+			{{text}}
+		</div>
+	</div>
+</script>
+
+<div class="popup" id="popup-about">
+	<b class="popup__close js-popup-close"></b>
+
+    <div class="popup__wrapper">
+		<header class="popup__header">
+	    	<h2>О компании</h2>
+		</header>
+
+		<section class="popup__conteiner clearfix">
+			<h3>Давайте мы расскажем об этом чуть позже. А пока два слова о нас.</h3>
+			<p>Вы, вероятно, уже поняли, что мы не просто копирайтеры. Мы проповедуем комплексный подход к написанию текстов, работаем на стыке маркетинга, дизайна, веба и, конечно, копирайтинга.<br>Это очень сложно, но современные реалии таковы, что только тот, кто много делает — будет вознагражден. Подавляющее большинство наших текстов созданы для интернета, что определило нашу специализацию на работе с веб-студиями и интернет-компаниями. Они обращаются к нам, когда им или их клиентам нужно качественное современное решение в области контента. Это не значит, что мы не пишем других текстов. Мы можем написать текст о строительной компании, производственной, торговой и т.д. Тексты для сайтов — наша стихия.</p>
+
+			<h3>Давайте мы расскажем об этом чуть позже. А пока два слова о нас.</h3>
+			<p>Вы, вероятно, уже поняли, что мы не просто копирайтеры. Мы проповедуем комплексный подход к написанию текстов, работаем на стыке маркетинга, дизайна, веба и, конечно, копирайтинга.<br>Это очень сложно, но современные реалии таковы, что только тот, кто много делает — будет вознагражден. Подавляющее большинство наших текстов созданы для интернета, что определило нашу специализацию на работе с веб-студиями и интернет-компаниями. Они обращаются к нам, когда им или их клиентам нужно качественное современное решение в области контента. Это не значит, что мы не пишем других текстов. Мы можем написать текст о строительной компании, производственной, торговой и т.д. Тексты для сайтов — наша стихия.</p>
+		</section>
+	</div>
+</div>
+
+<div class="layout-wrapper">
+	<header class="layout-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<div class="layout-header__upper">
+		<div class="layout-header__wrapper">
+			<a href="./index.html" class="layout-header__logo logo"></a>
+
+			<div class="layout-header__phone">
+				<a href="tel:8-861-201-90-64" class="layout-header__phone__item">8 (861) 201-90-64</a>
+				<a href="tel:8-861-210-99-30" class="layout-header__phone__item">8 (861) 210-99-30</a>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navigation">
+		<div class="navigation__wrapper">
+
+			<ul class="navigation__list">
+			    <li class="navigation__item"><a href="./index.html" class="navigation__link">Главная</a></li>
+			    <li class="navigation__item"><a href="./catalog.html" class="navigation__link">Для женщин</a></li>
+			    <li class="navigation__item"><a href="./catalog.html" class="navigation__link current">Для мужчин</a></li>
+			    <li class="navigation__item"><a href="./catalog.html" class="navigation__link">Для детей</a></li>
+			    <li class="navigation__item"><a href="" class="navigation__link">Обувь</a></li>
+			    <li class="navigation__item"><a href="" class="navigation__link">Аксессуары</a></li>
+			    <li class="navigation__item"><a href="" class="navigation__link">Спорт</a></li>
+			    <li class="navigation__item"><a href="" class="navigation__link">Товары для дома</a></li>
+			    
+			    <!--
+			    <li class="navigation__item"><a href="" class="navigation__link">Как нас найти</a></li>
+			    <li class="navigation__item"><a href="" class="navigation__link">Вакансии</a></li>
+			    -->
+			    
+			    <li class="navigation__item"><a href="" class="navigation__link">О компании</a></li>
+			    <li class="navigation__item"><a href="./contacts.html" class="navigation__link">Контакты</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+	<div class="layout-wrapper__inner">
+		
+		<div class="layout-wrapper__content clearfix" itemprop="mainContentOfPage">
+		
+			<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	<ul class="category">
+		<li class="category__item"><a href="" class="category__item__link">Для женщин</a></li>
+		<li class="category__item"><a href="" class="category__item__link current">Для мужчин</a>
+			<ul class="category__sub-category sub-category">
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Брюки</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Верхняя одежда</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link current">Джинсы</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Костюмы</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Кофты, кардиганы</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Одежда для дома</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Пиджаки</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Рубашки</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Свитеры, пуловеры</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Толстовки, свитшоты</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Футболки</a></li>
+				<li class="sub-category__item"><a href="" class="sub-category__item__link">Шорты</a></li>
+			</ul>
+		</li>
+		<li class="category__item"><a href="" class="category__item__link">Для детей</a></li>
+		<li class="category__item"><a href="" class="category__item__link">Обувь</a></li>
+		<li class="category__item"><a href="" class="category__item__link">Аксессуары</a></li>
+		<li class="category__item"><a href="" class="category__item__link">Спорт</a></li>
+		<li class="category__item"><a href="" class="category__item__link">Товары для дома</a></li>
+	</ul>
+</aside>
+
+			<div class="content">
+				<div class="inner">
+					<h2>Джинсы</h2>
+					
+					<div class="pagination">
+						<span class="pagination__title">Товаров:</span>
+						<span class="pagination__count">853</span>
+						<ul class="pagination__list">
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link current">1</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">2</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">3</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">4</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">5</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">6</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">7</a></li>
+							<li class="pagination__list__item">...</li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">11</a></li>
+						</ul>
+					</div>
+					
+					<div class="catalog clearfix">
+						<div class="product">
+	
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="./images/content/product.jpg" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">Marhatter</div>
+		<div class="product__content__price">500 Р</div>
+		
+		<div class="product__content__size">Размеры в наличии:<br>57-59</div>
+	</div>
+</div>
+						
+						<div class="product">
+	
+	<span class="product__status product__status_new"></span>
+	
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="./images/content/product.jpg" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">Marhatter</div>
+		<div class="product__content__price">500 Р</div>
+		
+		<div class="product__content__size">Размеры в наличии:<br>57-59</div>
+	</div>
+</div>
+
+						<div class="product">
+	
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="./images/content/product.jpg" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">Marhatter</div>
+		<div class="product__content__price">500 Р</div>
+		
+		<div class="product__content__size">Размеры в наличии:<br>57-59</div>
+	</div>
+</div>
+
+						<div class="product">
+	
+	<span class="product__status product__status_new"></span>
+	
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="./images/content/product.jpg" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">Marhatter</div>
+		<div class="product__content__price">500 Р</div>
+		
+		<div class="product__content__size">Размеры в наличии:<br>57-59</div>
+	</div>
+</div>
+						
+						<div class="product">
+	
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="./images/content/product.jpg" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">Marhatter</div>
+		<div class="product__content__price">500 Р</div>
+		
+		<div class="product__content__size">Размеры в наличии:<br>57-59</div>
+	</div>
+</div>
+
+						<div class="product">
+	
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="./images/content/product.jpg" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">Marhatter</div>
+		<div class="product__content__price">500 Р</div>
+		
+		<div class="product__content__size">Размеры в наличии:<br>57-59</div>
+	</div>
+</div>
+					</div>
+
+					<div class="pagination">
+						<span class="pagination__title">Товаров:</span>
+						<span class="pagination__count">853</span>
+						<ul class="pagination__list">
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link current">1</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">2</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">3</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">4</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">5</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">6</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">7</a></li>
+							<li class="pagination__list__item">...</li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">11</a></li>
+						</ul>
+					</div>
+				
+				</div>
+
+				<h2>Новое, лучшее, интересное</h2>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer class="layout-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	<div class="layout-footer__wrapper">
+		
+		<div class="layout-footer__copiright">©2015 ‘МОДНАЯ СЕМЬЯ”</div>
+		
+		<a href="" target="_blank" class="layout-footer__instagram"></a>
+		
+	</div>
+</footer>
+
+<script src="./js/main.min.js"></script>
+
+</body>
+</html>
