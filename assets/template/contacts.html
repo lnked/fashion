@@ -1,0 +1,27 @@
+@@include('./components/meta.html', {
+	"title": "Main"
+})
+
+<div class="layout-wrapper">
+	@@include('./components/header.html', {
+		"current": "contacts"
+	})
+
+	<div class="layout-wrapper__inner">
+		
+		<div class="layout-wrapper__content clearfix" itemprop="mainContentOfPage">
+
+			<div class="content">
+				<div class="inner">
+					<h2>Как нас найти</h2>
+					<a href="#popup-about" class="info js-open-popup">О нас</a>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=kRMijg9_XbxZQ4ys1CMRlGxHAqWgMFkN&width=100%&height=690&lang=ru_RU&sourceType=constructor"></script>
+	</div>
+</div>
+
+@@include('./components/footer.html')

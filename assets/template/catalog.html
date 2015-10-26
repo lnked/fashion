@@ -1,0 +1,107 @@
+@@include('./components/meta.html', {
+	"title": "Main"
+})
+
+<div class="layout-wrapper">
+	@@include('./components/header.html', {
+		"current": "catalog"
+	})
+
+	<div class="layout-wrapper__inner">
+		
+		<div class="layout-wrapper__content clearfix" itemprop="mainContentOfPage">
+		
+			@@include('./components/sidebar.html')
+
+			<div class="content">
+				<div class="inner">
+					<h2>Джинсы</h2>
+					
+					<div class="pagination">
+						<span class="pagination__title">Товаров:</span>
+						<span class="pagination__count">853</span>
+						<ul class="pagination__list">
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link current">1</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">2</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">3</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">4</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">5</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">6</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">7</a></li>
+							<li class="pagination__list__item">...</li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">11</a></li>
+						</ul>
+					</div>
+					
+					<div class="catalog clearfix">
+						@@include('./components/product.html', {
+							"image": "./images/content/product.jpg",
+							"name": "Marhatter",
+							"size": "Размеры в наличии:<br>57-59",
+							"price": "500 Р"
+						})
+						
+						@@include('./components/product.html', {
+							"image": "./images/content/product.jpg",
+							"name": "Marhatter",
+							"size": "Размеры в наличии:<br>57-59",
+							"price": "500 Р",
+							"status": "new"
+						})
+
+						@@include('./components/product.html', {
+							"image": "./images/content/product.jpg",
+							"name": "Marhatter",
+							"size": "Размеры в наличии:<br>57-59",
+							"price": "500 Р"
+						})
+
+						@@include('./components/product.html', {
+							"image": "./images/content/product.jpg",
+							"name": "Marhatter",
+							"size": "Размеры в наличии:<br>57-59",
+							"price": "500 Р",
+							"status": "new"
+						})
+						
+						@@include('./components/product.html', {
+							"image": "./images/content/product.jpg",
+							"name": "Marhatter",
+							"size": "Размеры в наличии:<br>57-59",
+							"price": "500 Р"
+						})
+
+						@@include('./components/product.html', {
+							"image": "./images/content/product.jpg",
+							"name": "Marhatter",
+							"size": "Размеры в наличии:<br>57-59",
+							"price": "500 Р"
+						})
+					</div>
+
+					<div class="pagination">
+						<span class="pagination__title">Товаров:</span>
+						<span class="pagination__count">853</span>
+						<ul class="pagination__list">
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link current">1</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">2</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">3</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">4</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">5</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">6</a></li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">7</a></li>
+							<li class="pagination__list__item">...</li>
+							<li class="pagination__list__item"><a href="" class="pagination__list__item__link">11</a></li>
+						</ul>
+					</div>
+				
+				</div>
+
+				<h2>Новое, лучшее, интересное</h2>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@@include('./components/footer.html')

@@ -1,0 +1,32 @@
+.layout {
+	width: 100%;
+	height: 100%;
+	max-width: 960px;
+	padding: 0 10px;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.inline {
+	display: inline-block;
+	vertical-align: top;
+	*display: inline;
+	*zoom: 1;
+}
+
+.layout-wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	background: #fff url(../images/wrap.png) repeat-y 50% 0;
+
+	&__inner {
+		padding-bottom: $footerHeight;
+	}
+
+	&__content {
+		@extend .layout;
+		padding-top: 40px;
+	}
+}

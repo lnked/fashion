@@ -1,0 +1,16 @@
+<div class="product">
+	@@if(typeof(status) !== 'undefined') {
+	<span class="product__status product__status_@@status"></span>
+	}
+	
+	<a href="#" data-productid="10" class="product__image js-open-product">
+		<img src="@@image" class="product__image__src" alt="">
+	</a>
+	
+	<div class="product__content">
+		<div class="product__content__title">@@name</div>
+		<div class="product__content__price">@@price</div>
+		
+		<div class="product__content__size">@@size</div>
+	</div>
+</div>

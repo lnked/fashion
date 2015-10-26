@@ -1,0 +1,37 @@
+.layout-header {
+	height: 154px;
+	background-color: #00adef;
+
+	&__wrapper {
+		@extend .layout;
+	}
+	
+	&__upper {
+		height: 91px;
+	}
+
+	&__logo {
+		position: absolute;
+		left: 10px;
+		top: 2px;
+	}
+
+	&__phone {
+		position: absolute;
+		right: 10px;
+		top: 23px;
+		font-size: 0;
+		padding-left: 38px;
+		text-align: right;
+		background: url(../images/phone.png) 0 7px no-repeat;
+		
+		&__item {
+			color: #fff;
+			font-size: 2rem;
+			font-weight: 400;
+			display: block;
+			text-decoration: none;
+			margin-bottom: 6px;
+		}
+	}
+}

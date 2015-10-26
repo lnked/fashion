@@ -1,0 +1,59 @@
+.stand {
+	padding: 16px 0 19px;
+	font-size: 0;
+	position: relative;
+	margin-bottom: 3rem;
+
+	&__image {
+		font-size: 0;
+		border: 13px solid;
+	
+		&_back {
+			border-color: #808080;	
+		}
+
+		&_front {
+			border-color: #a4a4a4;
+		}
+
+		&__src {
+
+		}
+	}
+	
+	&__content {
+		position: absolute;
+		left: 13px;
+		right: 13px;
+		top: 13px;
+		bottom: 13px;
+
+		&__button {
+			text-align: center;
+			position: absolute;
+			bottom: 22px;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__front {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -230px;
+		z-index: 100;
+	}
+
+	&__back {
+		position: relative;
+
+		&_left {
+			float: left;
+		}
+
+		&_right {
+			float: right;
+		}
+	}
+}

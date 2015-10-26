@@ -1,0 +1,26 @@
+.button {
+	height: 5.6rem;
+	padding: 0 2.6rem;
+	text-decoration: none;
+	display: inline-block;
+	background: #00adef;
+	color: #fff;
+	font-family: $fontForms;
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 5.6rem;
+	text-transform: uppercase;
+	border: 0;
+	box-shadow: 0 0.3rem 0 rgba(0, 0, 0, 0.16);
+	-webkit-appearance: none;
+	transition: border-color $time, background-color $time, color $time;
+	
+	&_lp {
+		padding: 0 6rem;
+	}
+
+	&:hover {
+		background: #0078ff;
+		color: #fff;
+	}
+}
