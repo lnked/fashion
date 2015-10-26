@@ -106,7 +106,7 @@
 		initPopup: function()
 		{
 			$.popup.init('.js-open-popup', {
-				cssPosition: true,
+				cssPosition: false,
 				wrapper: '.layout-wrapper'
 			});
 

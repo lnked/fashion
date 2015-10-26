@@ -251,7 +251,7 @@ $.popup.open('popup-choose-photo-source');
 
 				if (!defaults.cssPosition)
 	        	{
-					$popup.css(popup._getPosition($popup));
+	        		$popup.css(popup._getPosition($popup));
 				}
 
 				if (overlay) {
@@ -351,7 +351,7 @@ $.popup.open('popup-choose-photo-source');
 				nested = temp.split('/');
 			}
 
-			selector = temp;
+        	selector = temp;
 
 			if (nested.length)
 			{
@@ -371,7 +371,7 @@ $.popup.open('popup-choose-photo-source');
 					selector = 'tpl-'+selector;
 				}
 
-				if (typeof overlay == 'undefined')
+        		if (typeof overlay == 'undefined')
 				{
 					overlay = defaults.overlay.enable;
 				}

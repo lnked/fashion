@@ -115,7 +115,7 @@
 		initPopup: function()
 		{
 			$.popup.init('.js-open-popup', {
-				cssPosition: true,
+				cssPosition: false,
 				wrapper: '.layout-wrapper'
 			});
 
@@ -686,7 +686,7 @@ $.popup.open('popup-choose-photo-source');
 
 				if (!defaults.cssPosition)
 	        	{
-					$popup.css(popup._getPosition($popup));
+	        		$popup.css(popup._getPosition($popup));
 				}
 
 				if (overlay) {
@@ -786,7 +786,7 @@ $.popup.open('popup-choose-photo-source');
 				nested = temp.split('/');
 			}
 
-			selector = temp;
+        	selector = temp;
 
 			if (nested.length)
 			{
@@ -806,7 +806,7 @@ $.popup.open('popup-choose-photo-source');
 					selector = 'tpl-'+selector;
 				}
 
-				if (typeof overlay == 'undefined')
+        		if (typeof overlay == 'undefined')
 				{
 					overlay = defaults.overlay.enable;
 				}
@@ -858,7 +858,7 @@ $.popup.open('popup-choose-photo-source');
 	
 	$.app.product = {
 		
-		loadProduct: function(id, _overlay, _bodyclass)
+		loadProduct: function(id)
 		{
 			$.app.ajaxForm.send(
 				window.load_product_url,
@@ -877,7 +877,7 @@ $.popup.open('popup-choose-photo-source');
 
 						body.append(popup);
 
-						$.popup.open('#tmpl_product_item', _overlay, _bodyclass);
+						$.popup.open('#tmpl_product_item', true, false);
 					}
 				}
 			);
@@ -905,18 +905,6 @@ $.popup.open('popup-choose-photo-source');
 	            
 	            if ($(this).data('productid'))
 	            {
-	            	var bodyclass = false, overlay = true;
-
-	            	if (typeof($(this).data('bodyclass')) !== 'undefined')
-					{
-						bodyclass = $(this).data('bodyclass');
-					}
-
-					if (typeof($(this).data('overlay')) !== 'undefined')
-					{
-						overlay = $(this).data('overlay');
-					}
-
 	            	if ($(this).hasClass('js-product-navigation'))
 		            {
 		            	$.popup.close($('.popup.is-open.temp'));
@@ -929,7 +917,7 @@ $.popup.open('popup-choose-photo-source');
 		            }
 		            else
 		            {
-		            	_this.loadProduct(parseInt($(this).data('productid')), overlay, bodyclass);	
+		            	_this.loadProduct(parseInt($(this).data('productid')));
 		            }
 		        }
 			});

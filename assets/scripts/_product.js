@@ -5,7 +5,7 @@
 	
 	$.app.product = {
 		
-		loadProduct: function(id, _overlay, _bodyclass)
+		loadProduct: function(id)
 		{
 			$.app.ajaxForm.send(
 				window.load_product_url,
@@ -24,7 +24,7 @@
 
 						body.append(popup);
 
-						$.popup.open('#tmpl_product_item', _overlay, _bodyclass);
+						$.popup.open('#tmpl_product_item', true, false);
 					}
 				}
 			);
@@ -52,18 +52,6 @@
 	            
 	            if ($(this).data('productid'))
 	            {
-	            	var bodyclass = false, overlay = true;
-
-	            	if (typeof($(this).data('bodyclass')) !== 'undefined')
-					{
-						bodyclass = $(this).data('bodyclass');
-					}
-
-					if (typeof($(this).data('overlay')) !== 'undefined')
-					{
-						overlay = $(this).data('overlay');
-					}
-
 	            	if ($(this).hasClass('js-product-navigation'))
 		            {
 		            	$.popup.close($('.popup.is-open.temp'));
@@ -76,7 +64,7 @@
 		            }
 		            else
 		            {
-		            	_this.loadProduct(parseInt($(this).data('productid')), overlay, bodyclass);	
+		            	_this.loadProduct(parseInt($(this).data('productid')));
 		            }
 		        }
 			});

@@ -15,7 +15,7 @@
 	background-color: #000;
 	transition: opacity 0.3s;
 	@include opacity(0);
-	
+
 	&.visible {
 		display: block;
 	}
@@ -28,9 +28,6 @@
 .popup {
 	width: 960px;
 	position: fixed;
-	left: 50%;
-	top: 60px;
-	margin-left: -480px;
 	z-index: 9999;
 	background: #fff;
 	display: none;
