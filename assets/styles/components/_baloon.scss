@@ -1,0 +1,40 @@
+.baloon {
+	width: 14.7rem;
+	height: 17.7rem;
+	text-align: left;
+	position: absolute;
+	left: 10px;
+	top: -110px;
+	z-index: 100;
+	background: url(../images/baloon.png) 0 0 no-repeat;
+	
+	&__content {
+		padding: 20px 0 0 12px;
+
+		&__header {
+			font-size: 1.6rem;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		&__list {
+			li {
+				background: url(../images/li.png) 0 10px no-repeat;
+				padding-left: 15px;
+				color: #000;
+				font-size: 1.6rem;
+				font-weight: 400;
+				margin-bottom: 5px;
+					
+				a {
+					color: #000;
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

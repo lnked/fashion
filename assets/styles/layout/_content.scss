@@ -1,7 +1,12 @@
 .content {
-
+	margin-bottom: 30px;
 }
 
 .sidebar + .content {
 	margin-left: 205px;
+}
+
+.content-push {
+	margin-left: 205px;
+	margin-bottom: 40px;
 }

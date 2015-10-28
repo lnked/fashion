@@ -26,22 +26,23 @@
 				}
 			}
 
-			// if ($('.carousel-slider').length > 0 && $('.carousel-slider').find('.carousel_item').length > 4)
-			// {
-			// 	var $carouselSlider = $('.carousel-slider');
+			if ($('#carousel').length > 0 && $('#carousel').find('.carousel__item').length >= 4)
+			{
+				var $carouselSlider = $('#carousel');
 				
-			// 	$carouselSlider.removeClass('carousel__list_none');
+				$carouselSlider.removeClass('carousel__list_none');
 
-			// 	$carouselSlider.slick({
-			// 		infinite: true,
-			// 		draggable: false,
-			// 		slidesToShow: 4,
-			// 		slidesToScroll: 1,
-			// 		prevArrow: '<button type="button" class="carousel_controll carousel_controll-prev slick-prev"></button>',
-			// 		nextArrow: '<button type="button" class="carousel_controll carousel_controll-next slick-next"></button>'
-			// 	});
-			// }
-
+				$carouselSlider.slick({
+					infinite: true,
+					draggable: false,
+					speed: 300,
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					cssEase: 'linear',
+					prevArrow: '<button type="button" class="carousel__navigation carousel__navigation_prev slick-prev"></button>',
+					nextArrow: '<button type="button" class="carousel__navigation carousel__navigation_next slick-next"></button>'
+				});
+			}
 		},
 		
 		initSelect: function()

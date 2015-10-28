@@ -1,9 +1,14 @@
+.stand-list {
+	border-bottom: 1px dotted #c2c2c2;
+	padding-bottom: 85px;
+	margin-bottom: 65px;
+}
+
 .stand {
-	padding: 16px 0 19px;
 	font-size: 0;
 	position: relative;
-	margin-bottom: 3rem;
-
+	padding: 16px 0 19px;
+	
 	&__image {
 		font-size: 0;
 		border: 13px solid;
