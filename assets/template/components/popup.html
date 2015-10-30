@@ -12,17 +12,113 @@
 	</div>
 </script>
 
+<script type="text/html" id="tmpl-zoom-image">
+	<img src="{{ preview }}" alt="" class="popup-product__image__src js-magnifier cloudzoom" data-large="{{ large }}">
+</script>
+
 <script type="text/html" id="tmpl-popup-product">
 	<div class="popup" id="tmpl_product_item">
 	    <b class="popup__close js-popup-close"></b>
 
-	    {{#title}}
-	    <div class="popup__header">{{title}}</div>
-	    {{/title}}
-	    
-		<div class="popup__content clearfix">
-			{{text}}
+	   <div class="popup__wrapper">
+			
+			<div class="popup-product clearfix">
+				
+				{{#product.image}}
+			    <div class="popup-product__image" id="magnification">
+					<span class="magnification" id="magnification-pointer">Увеличить</span>
+					<div id="zoom-image">
+	                    <img src="{{ product.image.previews }}" alt="" class="popup-product__image__src js-magnifier cloudzoom" data-large="{{ product.image.large }}">
+	                </div>
+				</div>
+				{{/product.image}}
+
+				<div class="popup-product__wrap">
+					<div class="inner">
+						{{#product.name}}
+					    <div class="popup-product__name">{{ product.name }}</div>
+					    {{/product.name}}
+
+					    {{#product.price}}
+					    <div class="popup-product__price">{{ product.price }}</div>
+					    {{/product.price}}
+
+						<div class="popup-product__content">
+							{{#product.article}}
+						    <div class="popup-product__article">Артикул: {{ product.article }}</div>
+						    {{/product.article}}
+
+						    {{#product.desc}}
+						    <div class="popup-product__data">{{ product.desc }}</div>
+						    {{/product.desc}}
+						</div>
+						
+						{{#product.is_colors}}
+						<div class="popup-product__colors clearfix js-select-wrap">
+							<div class="popup-product__colors__title">Цвет:</div>
+							
+							<ul class="popup-product__colors__list">
+								{{#product.colors}}
+								<li class="popup-product__colors__item">
+									<a href="{{ large }}" data-zoom="{{ zoom }}" class="popup-product__colors__item__preview js-select-item{{#current}} current{{/current}}"><img src="{{ small }}" class="popup-product__colors__item__preview__image" alt=""></a>
+								</li>
+								{{/product.colors}}
+							</ul>
+						</div>
+						{{/product.is_colors}}
+						
+						{{#product.is_images}}
+						<div class="popup-product__images clearfix js-select-wrap">
+							<ul class="popup-product__images__list">
+								{{#product.images}}
+								<li class="popup-product__images__item">
+									<a href="{{ large }}" data-zoom="{{ zoom }}" class="popup-product__images__image js-select-item{{#current}} current{{/current}}">
+										<img src="{{ small }}" class="popup-product__images__image__src" alt="">
+									</a>
+								</li>
+								{{/product.images}}
+							</ul>
+						</div>
+						{{/product.is_images}}
+
+						<div class="popup-product__similar">
+							<div class="popup-product__similar__title">Не забудьте приобрести</div>
+
+							<div class="popup-product__carousel">
+								<div class="popup-product__carousel__item">
+									<a href="" class="popup-product__carousel__item__image">
+										<img src="./images/content/sm-car-1.jpg" class="popup-product__carousel__item__image__src" alt="">
+									</a>
+
+									<div class="popup-product__carousel__item__name">Выгодно! Ремень</div>
+									<div class="popup-product__carousel__item__price">500 Р</div>
+								</div>
+
+								<div class="popup-product__carousel__item">
+									<a href="" class="popup-product__carousel__item__image">
+										<img src="./images/content/sm-car-2.jpg" class="popup-product__carousel__item__image__src" alt="">
+									</a>
+
+									<div class="popup-product__carousel__item__name">Ремень (муж)</div>
+									<div class="popup-product__carousel__item__price"><del>1999 Р</del>  599 Р</div>
+								</div>
+
+								<div class="popup-product__carousel__item">
+									<a href="" class="popup-product__carousel__item__image">
+										<img src="./images/content/sm-car-3.jpg" class="popup-product__carousel__item__image__src" alt="">
+									</a>
+
+									<div class="popup-product__carousel__item__name">Выгодно! Ремень</div>
+									<div class="popup-product__carousel__item__price">500 Р</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</div>
+
 	</div>
 </script>
 

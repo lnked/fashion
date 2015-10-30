@@ -28,6 +28,7 @@
 .popup {
 	width: 960px;
 	position: fixed;
+	// position: absolute;
 	z-index: 9999;
 	background: #fff;
 	display: none;
@@ -56,6 +57,8 @@
 		position: absolute;
 		top: 20px;
 		right: 18px;
+		z-index: 100;
+		display: block;
 		cursor: pointer;
 	}
 

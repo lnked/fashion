@@ -1,6 +1,49 @@
 {
 	"status": true,
 	"product": {
-		"name": ""
+		"name": "Джинсы",
+		"price": "500 Р",
+		"article": "34293859486968",
+		"desc": "Цвет: темно-синий",
+		"image": {
+			"previews": "./images/content/product-1.jpg",
+			"large": "./images/content/product-large.jpg"
+		},
+		"is_colors": true,
+		"colors": [
+			{
+				"current": true,
+				"small": "./images/content/product-color-1.jpg",
+				"large": "./images/content/product-1.jpg",
+				"zoom": "./images/content/product-large.jpg"
+			},
+			{
+				"small": "./images/content/product-2.jpg",
+				"large": "./images/content/product-2.jpg",
+				"zoom": "./images/content/product-2.jpg"
+			},
+			{
+				"small": "./images/content/product-3.jpg",
+				"large": "./images/content/product-3.jpg",
+				"zoom": "./images/content/product-3.jpg"
+			}
+		],
+		"is_images": true,
+		"images": [
+			{
+				"current": true,
+				"small": "./images/content/product-small-1.jpg",
+				"large": "./images/content/product-2.jpg",
+				"zoom": "./images/content/product-2.jpg"
+			},
+			{
+				"small": "./images/content/product-small-2.jpg",
+				"large": "./images/content/product-3.jpg",
+				"zoom": "./images/content/product-3.jpg"
+			}
+		]
+	},
+	"simalars": {
+
 	}
 }

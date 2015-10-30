@@ -1,0 +1,176 @@
+.popup-product {
+	&__image {
+		float: left;
+		width: 430px;
+		height: 610px;
+		line-height: 610px;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+
+		&__src {
+			max-width: 100%;
+			max-height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			user-select: none;
+		}
+	}
+
+	&__wrap {
+		margin-left: 470px;
+	}
+
+	&__name {
+		color: #000;
+		font-family: $Roboto;
+		font-size: 2.4rem;
+		font-weight: 300;
+		margin-bottom: 15px;
+	}
+
+	&__price {
+		color: #333;
+		font-size: 1.8rem;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	&__content {
+		color: #000;
+		font-family: $Roboto;
+		font-size: 1.4rem;
+		font-weight: 300;
+		margin-bottom: 25px;
+	}
+
+	&__article {
+		line-height: 1.4;
+	}
+
+	&__data {
+		line-height: 1.4;
+	}
+	
+	&__colors {
+		clear: both;
+		margin-bottom: 10px;
+
+		&__title {
+			color: #000;
+			font-family: $Roboto;
+			font-size: 1.8rem;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+
+		&__list {
+			clear: both;
+		}
+		
+		&__item {
+			float: left;
+			margin-right: 5px;
+			margin-bottom: 5px;
+
+			&__preview {
+				width: 45px;
+				height: 60px;
+				border: 2px solid #fff;
+				display: block;
+				text-align: center;
+
+				&.current {
+					border-color: #8d2fa6;
+				}
+
+				&__image {
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+		}
+	}
+
+	&__images {
+		clear: both;
+		padding: 14px 0;
+		border: dashed #cacaca;
+		border-width: 1px 0;
+		margin-bottom: 30px;
+
+		&__list {
+			clear: both;
+			letter-spacing: normal;
+		}
+
+		&__item {
+			float: left;
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+
+		&__image {
+			width: 80px;
+			height: 100px;
+			border: 2px solid #fff;
+			display: block;
+
+			&.current {
+				border-color: #8d2fa6;
+			}
+
+			&__src {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+	
+	&__similar {
+		clear: both;
+	
+		&__title {
+			color: #000;
+			font-family: $Roboto;
+			font-size: 1.8rem;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__carousel {
+		clear: both;
+
+		&__item {
+			float: left;
+			margin: 0 2px;
+
+			&__image {
+				width: 130px;
+				height: 120px;
+				display: block;
+				margin-bottom: 10px;
+
+				&__src {
+					max-width: 100%;
+					max-height: 100%;
+					display: inline-block;
+				}
+			}
+
+			&__name {
+				color: #616161;
+				font-size: 1.6rem;
+				font-weight: 400;
+				margin-bottom: 5px;
+			}
+
+			&__price {
+				color: #616161;
+				font-size: 1.8rem;
+				font-weight: 700;
+			}
+		}
+	}
+}

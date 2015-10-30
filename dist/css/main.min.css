@@ -430,6 +430,8 @@ h2 {
     position: absolute;
     top: 20px;
     right: 18px;
+    z-index: 100;
+    display: block;
     cursor: pointer; }
   .popup__header {
     color: #2d2d2d;
@@ -1490,6 +1492,216 @@ ul.slick-dots li.slick-active button {
         text-decoration: underline; }
         .baloon__content__list li a:hover {
           text-decoration: none; }
+
+.popup-product__image {
+  float: left;
+  width: 430px;
+  height: 610px;
+  line-height: 610px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  .popup-product__image__src {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+.popup-product__wrap {
+  margin-left: 470px; }
+
+.popup-product__name {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 15px; }
+
+.popup-product__price {
+  color: #333;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px; }
+
+.popup-product__content {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 25px; }
+
+.popup-product__article {
+  line-height: 1.4; }
+
+.popup-product__data {
+  line-height: 1.4; }
+
+.popup-product__colors {
+  clear: both;
+  margin-bottom: 10px; }
+  .popup-product__colors__title {
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10px; }
+  .popup-product__colors__list {
+    clear: both; }
+  .popup-product__colors__item {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px; }
+    .popup-product__colors__item__preview {
+      width: 45px;
+      height: 60px;
+      border: 2px solid #fff;
+      display: block;
+      text-align: center; }
+      .popup-product__colors__item__preview.current {
+        border-color: #8d2fa6; }
+      .popup-product__colors__item__preview__image {
+        max-width: 100%;
+        max-height: 100%; }
+
+.popup-product__images {
+  clear: both;
+  padding: 14px 0;
+  border: dashed #cacaca;
+  border-width: 1px 0;
+  margin-bottom: 30px; }
+  .popup-product__images__list {
+    clear: both;
+    letter-spacing: normal; }
+  .popup-product__images__item {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px; }
+  .popup-product__images__image {
+    width: 80px;
+    height: 100px;
+    border: 2px solid #fff;
+    display: block; }
+    .popup-product__images__image.current {
+      border-color: #8d2fa6; }
+    .popup-product__images__image__src {
+      max-width: 100%;
+      max-height: 100%; }
+
+.popup-product__similar {
+  clear: both; }
+  .popup-product__similar__title {
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10px; }
+
+.popup-product__carousel {
+  clear: both; }
+  .popup-product__carousel__item {
+    float: left;
+    margin: 0 2px; }
+    .popup-product__carousel__item__image {
+      width: 130px;
+      height: 120px;
+      display: block;
+      margin-bottom: 10px; }
+      .popup-product__carousel__item__image__src {
+        max-width: 100%;
+        max-height: 100%;
+        display: inline-block; }
+    .popup-product__carousel__item__name {
+      color: #616161;
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 5px; }
+    .popup-product__carousel__item__price {
+      color: #616161;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 700; }
+
+/* CSS for lens */
+.cloudzoom-lens {
+  width: 143px;
+  height: 217px;
+  cursor: crosshair;
+  z-index: 10000;
+  border: 1px solid #949291;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+/* CSS for zoom window. */
+.cloudzoom-zoom {
+  border: 1px solid #999;
+  width: 474px;
+  height: 675px;
+  position: absolute;
+  left: 50% !important;
+  margin-left: 0px;
+  z-index: 10999;
+  background-color: #fff; }
+
+/* CSS for zoom window in 'inside' mode. */
+.cloudzoom-zoom-inside {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  z-index: 999; }
+
+/* CSS for captions */
+.cloudzoom-caption {
+  display: none; }
+
+/* A blank image */
+.cloudzoom-blank {
+  background-image: url(../images/blank.png); }
+
+.cloudzoom-blank > div:nth-child(odd) {
+  display: none !important; }
+
+/* The animated ajax loading image */
+.cloudzoom-ajax-loader {
+  background-image: url(../images/ajax-loader.gif);
+  width: 32px;
+  height: 32px; }
+
+.magnification {
+  width: 106px;
+  height: 41px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 41px;
+  z-index: 2000;
+  text-align: center;
+  opacity: 0;
+  color: #000;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 1px solid #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s; }
+
+.magnification-image {
+  position: relative; }
+
+.active .magnification {
+  opacity: 0.6; }
 
 /* Smartphones (portrait and landscape) ----------- */
 /* Smartphones (landscape) ----------- */

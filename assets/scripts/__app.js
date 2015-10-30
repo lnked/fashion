@@ -1,6 +1,8 @@
 ;( function( $ ) {
 	"use strict";
 
+	var body = $('body');
+
 	$.app = {
 		
 		initSlider: function()
@@ -106,9 +108,15 @@
 
 		initPopup: function()
 		{
+			var that = this;
+			
 			$.popup.init('.js-open-popup', {
 				cssPosition: false,
 				wrapper: '.layout-wrapper'
+			});
+
+			body.on('popup.after_open', function(e, popup){
+				that.magnification.init();
 			});
 
 			this.product.initPopup();

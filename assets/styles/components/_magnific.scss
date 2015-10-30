@@ -1,0 +1,26 @@
+.magnification {
+	width: 106px;
+	height: 41px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 41px;
+	z-index: 2000;
+	text-align: center;
+	opacity: 0;
+	color: #000;
+	font-size: 1.2rem;
+	font-weight: 400;
+	border: 1px solid #000;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+	transition: opacity $animate-speed;
+}
+
+.magnification-image {
+	position: relative;
+}
+
+.active .magnification {
+	opacity: 0.6;
+}

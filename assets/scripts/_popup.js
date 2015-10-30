@@ -83,8 +83,9 @@ $.popup.open('popup-choose-photo-source');
                 left = Math.round((dw - pw)/2);
             }
             
-            if(wh >= ph) {
-                css.position = 'fixed';
+            if (wh > (ph + 120))
+            {
+            	css.position = 'fixed';
                 top = '50%';
                 css.marginTop = '-' + Math.floor( ph / 2 ) + 'px';
             }

@@ -47,6 +47,20 @@
 				}
 			}
 
+			body.on('click', '.js-select-item', function(e){
+				e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+				$(this).closest('.js-select-wrap').find('.current').removeClass('current');
+				$(this).addClass('current');
+
+				var preview = $(this).attr('href'), large = $(this).data('zoom');
+
+				$('#zoom-image').html(
+					template('tmpl-zoom-image', { 'preview': preview, 'large': large })
+				);
+				
+			});
+
 			body.on('click', '.js-open-product', function(e){
 	            e.preventDefault ? e.preventDefault() : e.returnValue = false;
 	            

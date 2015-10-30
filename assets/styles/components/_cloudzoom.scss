@@ -1,0 +1,49 @@
+/* CSS for lens */
+.cloudzoom-lens {
+    width: 143px;
+	height: 217px;
+    cursor: crosshair;
+    z-index: 10000;
+	border: 1px solid #949291;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+/* CSS for zoom window. */
+.cloudzoom-zoom {
+	border: 1px solid #999;
+	width: 474px;
+	height: 675px;
+	position: absolute;
+	left: 50% !important;
+	margin-left: 0px;
+	z-index: 10999;
+	background-color: #fff;
+}
+
+/* CSS for zoom window in 'inside' mode. */
+.cloudzoom-zoom-inside {
+	border: none;
+	box-shadow: none;
+	z-index: 999;
+}
+
+/* CSS for captions */
+.cloudzoom-caption {
+    display: none;
+}
+
+/* A blank image */
+.cloudzoom-blank {
+    background-image: url(../images/blank.png);
+}
+
+.cloudzoom-blank > div:nth-child(odd) {
+    display: none !important;
+}
+
+/* The animated ajax loading image */
+.cloudzoom-ajax-loader {
+    background-image: url(../images/ajax-loader.gif);
+    width: 32px;
+    height: 32px;
+}
