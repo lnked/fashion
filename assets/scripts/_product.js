@@ -7,6 +7,8 @@
 		
 		loadProduct: function(id)
 		{
+			var _this = this;
+
 			$.app.ajaxForm.send(
 				window.load_product_url,
 				'get',
@@ -25,6 +27,18 @@
 						body.append(popup);
 
 						$.popup.open('#tmpl_product_item', true, false);
+
+						popup.find('.js-open-product').on('click', function(e){
+							e.preventDefault();
+
+							$('.popup.is-open').remove();
+
+							var tmp = window.location.hash.substr(1).split('-');
+
+							_this.loadProduct(parseInt($(this).data('productid')), true, false);
+						
+							return false;
+						});
 					}
 				}
 			);
