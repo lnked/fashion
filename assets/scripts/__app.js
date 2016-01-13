@@ -5,6 +5,16 @@
 
 	$.app = {
 		
+		initSandwich: function()
+		{
+			this.sandwich.init({
+				keyHooks: !0,
+				selector: '.js-sandwich-menu',
+				wrapper: '.layout-wrapper',
+				overlay: '#menu-overlay'
+			});
+		},
+
 		initSlider: function()
 		{
 			if (!is_undefined($.fn.slick))
@@ -42,7 +52,30 @@
 					slidesToScroll: 1,
 					cssEase: 'linear',
 					prevArrow: '<button type="button" class="carousel__navigation carousel__navigation_prev slick-prev"></button>',
-					nextArrow: '<button type="button" class="carousel__navigation carousel__navigation_next slick-next"></button>'
+					nextArrow: '<button type="button" class="carousel__navigation carousel__navigation_next slick-next"></button>',
+					responsive: [
+						{
+							breakpoint: 1024,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 3
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
 				});
 			}
 		},
@@ -124,6 +157,7 @@
 
 		init: function()
 		{
+			this.initSandwich();
 			this.initSlider();
 			this.initPopup();
 			this.initMask();

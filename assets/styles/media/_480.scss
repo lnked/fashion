@@ -1,0 +1,22 @@
+@media only screen and (max-width: 480px) {
+	.layout-header {
+		
+		.layout-header__phone {
+			position: relative;
+			right: auto;
+			top: auto;
+		    float: left;
+		    clear: both;
+		    background-position: 0 7px;
+
+			&__item {
+				color: #fff;
+				font-size: 2rem;
+				font-weight: 400;
+				display: block;
+				text-decoration: none;
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

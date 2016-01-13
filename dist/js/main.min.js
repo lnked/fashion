@@ -14,6 +14,16 @@
 
 	$.app = {
 		
+		initSandwich: function()
+		{
+			this.sandwich.init({
+				keyHooks: !0,
+				selector: '.js-sandwich-menu',
+				wrapper: '.layout-wrapper',
+				overlay: '#menu-overlay'
+			});
+		},
+
 		initSlider: function()
 		{
 			if (!is_undefined($.fn.slick))
@@ -51,7 +61,30 @@
 					slidesToScroll: 1,
 					cssEase: 'linear',
 					prevArrow: '<button type="button" class="carousel__navigation carousel__navigation_prev slick-prev"></button>',
-					nextArrow: '<button type="button" class="carousel__navigation carousel__navigation_next slick-next"></button>'
+					nextArrow: '<button type="button" class="carousel__navigation carousel__navigation_next slick-next"></button>',
+					responsive: [
+						{
+							breakpoint: 1024,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 3
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
 				});
 			}
 		},
@@ -133,6 +166,7 @@
 
 		init: function()
 		{
+			this.initSandwich();
 			this.initSlider();
 			this.initPopup();
 			this.initMask();
@@ -1178,58 +1212,124 @@ $.popup.open('popup-choose-photo-source');
 
 // _sandwich.js
 
-;( function( $ ) {
-	$.fn.sandwich = function(settings) {
-		var settings = $.extend({
-            wrapper: '.wrap',
-            overlay: '.overlay'
-        }, settings);
+;(function ($) {
+	"use strict";
 
-		var $trigger = $(this), $body = $('body');
-		
-		$trigger.on('click', function(e){
-			e.preventDefault();
-			
-			if ($body.hasClass('page-visible'))
+	$.app = $.app = $.app || {};
+
+	var _this, body = $('body');
+	
+	$.app.sandwich = {
+
+		config: {
+			keyHooks: !1,
+			selector: '.js-sandwich-menu',
+            wrapper: '.layout-wrapper',
+            overlay: '.menu-overlay'
+		},
+
+		extend: function(config)
+		{
+			_this = this;
+
+			if (typeof config !== 'undefined')
+        	{
+        		var x;
+        		for (x in config)
+        		{
+        			if (typeof _this.config[x] !== 'undefined')
+        				_this.config[x] = config[x];
+        		}
+        	}
+		},
+
+		isOpen: function()
+		{
+			return body.hasClass('page-visible');
+		},
+
+		hide: function()
+		{
+			body.removeClass('page-open');
+
+	        setTimeout(function(){
+				body.removeClass('page-visible');
+			}, 300);
+
+	        $(this.config.overlay).css({
+	            'visibility': 'hidden'
+	        });
+		},
+
+		toggle: function()
+		{
+			if (body.hasClass('page-visible'))
 			{
 				setTimeout(function(){
-					$body.removeClass('page-visible');
-				}, 10);
+					body.removeClass('page-visible');
+				}, 300);
 			}
 			else
 			{
 				setTimeout(function(){
-					$body.addClass('page-visible');
+					body.addClass('page-visible');
 				}, 10);
 			}
-			
-			$body.toggleClass('page-open');
-			
-	        var visibility = 'visible';
 
-	        if (!$body.hasClass('page-open'))
+			body.toggleClass('page-open');
+
+			var visibility = 'visible';
+
+	        if (!body.hasClass('page-open'))
 	        {
 	            visibility = 'hidden'
 	        }
 	        
-	        $(settings.overlay).css({
+	        $(_this.config.overlay).css({
 	            'visibility': visibility
 	        });
-		});
+		},
 
-		$body.on('click', settings.overlay, function(e){
-			$body.removeClass('page-open');
+		sandwichTrigger: function()
+		{
+			_this = this;
 
-	        setTimeout(function(){
-				$body.removeClass('page-visible');
-			}, 10);
+			if (_this.config.keyHooks)
+			{
+				body.on('keydown', function(e) {
+					if(e.keyCode == 27 && _this.isOpen())
+					{
+						_this.toggle();
+					}
+				});
+	    	};
 
-	        $(settings.overlay).css({
-	            'visibility': 'hidden'
-	        });
-	    });
+			body.on('click', _this.config.selector, function(e){
+		        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+				_this.toggle();
+			});
+		},
+
+		overlayTrigger: function()
+		{
+			_this = this;
+
+			body.on('click', _this.config.overlay, function(e){
+				_this.hide();
+		    });
+		},
+
+		init: function(config)
+		{
+			this.extend(config);
+			
+			this.sandwichTrigger();
+			this.overlayTrigger();
+		}
+
 	};
-}(jQuery));
+
+})(jQuery);
 
 
 // _selectbox.js

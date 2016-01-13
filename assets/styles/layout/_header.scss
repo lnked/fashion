@@ -1,5 +1,6 @@
 .layout-header {
-	height: 154px;
+	// height: 154px;
+	height: 91px;
 	background-color: #00adef;
 
 	&__wrapper {
@@ -7,7 +8,7 @@
 	}
 	
 	&__upper {
-		height: 91px;
+		height: 100%;
 	}
 
 	&__logo {

@@ -1,6 +1,14 @@
 .logo {
 	width: 604px;
-	height: 85px;
+    max-width: 80%;
 	display: block;
 	background: url(../images/logo.png) no-repeat 0 0;
+	background-size: 100% auto;
+
+	&:before {
+		content: "";
+		width: 100%;
+		display: block;
+		padding-top: 14.072847682%;
+	}
 }
