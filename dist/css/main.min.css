@@ -1817,6 +1817,8 @@ ul.slick-dots li.slick-active button {
   opacity: 0.6; }
 
 @media only screen and (max-width: 960px) {
+  .page-open .layout-footer {
+    display: none; }
   .sandwich {
     z-index: 10000;
     opacity: 1;

@@ -1,4 +1,11 @@
 @media only screen and (max-width: 960px) {
+
+	.page-open {
+		.layout-footer {
+		    display: none;
+		}
+	}
+	
 	.sandwich {
 		z-index: 10000;
 		@include opacity(1);
