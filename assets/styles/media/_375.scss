@@ -1,0 +1,19 @@
+@media only screen and (max-width: 375px) {
+	.layout-header {
+		
+		&__phone {
+			&__item {
+				display: block;
+				
+				&:not(:last-child) {
+					margin-bottom: 1rem;
+				}
+
+				&__link,
+				&__address {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

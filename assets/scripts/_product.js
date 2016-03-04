@@ -36,7 +36,7 @@
 							var tmp = window.location.hash.substr(1).split('-');
 
 							_this.loadProduct(parseInt($(this).data('productid')), true, false);
-						
+							
 							return false;
 						});
 					}

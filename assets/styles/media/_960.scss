@@ -86,21 +86,46 @@
 			margin-bottom: 2rem;
 		}
 
-		.layout-header__phone {
+		&__phone {
 			position: relative;
 			right: auto;
 			top: auto;
 		    float: left;
 		    clear: both;
-		    line-height: 2.4rem;
-		    background-position: 0 0;
+		    line-height: 2rem;
+		    background: none;
+		    padding-left: 20px;
+		    margin-bottom: 0;
 
 		    &__item {
 		    	clear: none;
 		    	margin-right: 2rem;
-		    	line-height: 2.4rem;
 		    	margin-bottom: 0;
+		    	line-height: 1;
 		    	display: inline-block;
+
+				&__link,
+				&__address {
+			    	font-size: 1.8rem;
+			    	line-height: 2rem;
+					clear: none;
+					display: inline-block;
+				}
+		
+				&__link {
+					margin-right: 5px;
+				}
+
+				&__address {
+					margin-left: 5px;
+
+					&:before {
+						font-size: 2rem;
+						line-height: 2rem;
+						content: "-";
+						margin-right: 10px;
+					}
+				}
 		    }
 		}
 	}

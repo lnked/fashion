@@ -1,7 +1,7 @@
 @media only screen and (max-width: 480px) {
 	.layout-header {
 		
-		.layout-header__phone {
+		&__phone {
 			position: relative;
 			right: auto;
 			top: auto;
@@ -11,12 +11,29 @@
 
 			&__item {
 				color: #fff;
-				font-size: 2rem;
 				font-weight: 400;
 				display: block;
 				text-decoration: none;
-				margin-bottom: 6px;
+				margin-bottom: 0;
+				display: inline-block;
+
+				&__link,
+				&__address {
+					font-size: 1.8rem;
+
+					&:before {
+						display: none;
+					}
+				}
+
+				&__address {
+					display: none;
+				}
 			}
 		}
+	}
+
+	.carousel {
+		display: none;
 	}
 }

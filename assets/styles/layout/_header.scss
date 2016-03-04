@@ -20,19 +20,32 @@
 	&__phone {
 		position: absolute;
 		right: 10px;
-		top: 23px;
+		top: 8px;
 		font-size: 0;
-		padding-left: 38px;
+		padding-left: 40px;
 		text-align: right;
-		background: url(../images/phone.png) 0 7px no-repeat;
+		background: url(../images/phone.png) 0 10px no-repeat;
 		
 		&__item {
 			color: #fff;
-			font-size: 2rem;
 			font-weight: 400;
+			margin-bottom: 11px;
 			display: block;
-			text-decoration: none;
-			margin-bottom: 6px;
+			line-height: 1;
+
+			&__link {
+				color: #fff;
+				display: block;
+				font-weight: 700;
+				font-size: 1.5rem;
+				margin-bottom: 4px;
+				text-decoration: none;
+			}
+
+			&__address {
+				font-size: 1.3rem;
+				display: block;
+			}
 		}
 	}
 }
